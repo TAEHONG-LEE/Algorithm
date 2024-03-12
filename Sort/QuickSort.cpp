@@ -13,6 +13,5 @@ void QuickSort(int arr[], int low, int high){
         swap(arr[pivot], arr[j]);
         QuickSort(arr, low, j-1);
         QuickSort(arr, j+1, high);
-        
     }
 }
