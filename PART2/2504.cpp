@@ -21,11 +21,12 @@ int main() {
             temp *= 3;
             s.push('[');
         } else if (str[i] == ')' || str[i] == ']') {
-            if (s.empty() || (str[i] == ')' && s.top() != '(') || (str[i] == ']' && s.top() != '[')) {
+            if (s.empty() ||
+                (str[i] == ')' && s.top() != '(') ||
+                (str[i] == ']' && s.top() != '[')) {
                 isValid = false;
                 break;
             }
-
             if ((str[i] == ')' && str[i-1] == '(') || (str[i] == ']' && str[i-1] == '[')) {
                 answer += temp;
             }
@@ -37,7 +38,7 @@ int main() {
 
     if (!s.empty() || !isValid) answer = 0; 
 
-    cout << answer << "\n";
+    cout << answer << endl;
 
     return 0;
 }
